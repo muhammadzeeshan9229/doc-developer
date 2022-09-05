@@ -1,0 +1,69 @@
+Mocking Ways:
+   -provider overriding - mock methods of repository
+   -jest.mock()
+   -jest.spyon
+   -Ways To Mock Axios In Jest { }
+ 
+ 
+ 
+ 
+ 
+                          Functions
+should be defined
+should not throw error upon instantiation
+mocking Params:
+   - Params should be equal
+   - mocking External Dependencies
+try : 
+     should be defined
+     should not throw error upon instantiation
+     mocking Params:
+          - Params should be equal
+          - 
+     mocking Rerturn: 
+     mocking dependencyservice.functions - jest.mock('path') and jest.spyon(Service.prototype, 'method').mockimple
+      -tobe called
+      -called times
+      -const isReturnType = UsersService.prototype.loginAs(mockLoginBody,mockUser); ===> expect(isReturnType).toBe(true)
+      -called with mocked params
+      -called with mocked output - when promise get resolved
+      -called with mocked output - when promise get rejected
+      -handling if-exceptions
+     
+catch : 
+
+
+#To Check if / exception thrown on if 
+Promise matchers (Jest 20+)
+1.   
+test("Throws on error", async () => {
+    expect.assertions(1);
+    await expect(promiseHttpsGet(null)).rejects.toThrow(Error);
+  });
+  
+test('should throw a HttpException type of exception if .', async () => {
+          expect.assertions(3);
+          try {
+            await mockAuthService.validateUser(mockEmailIdentifier,mockPass)
+            expect(await mockAuthService.validateUser(mockEmailIdentifier,mockPass)).toThrow(new HttpException(
+                'Sorry your account is not Activated',
+                HttpStatus.NOT_FOUND,
+              ));
+          } catch (error) {
+              expect(error).toBeInstanceOf(HttpException);
+              expect(error).toHaveProperty('message', 'Sorry your account is not Activated');
+              expect(error).toHaveProperty( 'status',500);
+
+          }
+      });
+      
+      
+      
+      
+      
+      
+      
+      ///////////////////////////////////////////////////////////
+# explore Mongoose and quering
+# node-cron
+#express-basic-auth

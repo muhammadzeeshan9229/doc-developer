@@ -1,0 +1,10 @@
+Node js Standards
+
+App : 
+ - make app as server
+ - use api-security - cors
+ 
+ 
+ 
+MiddleWares : 
+-Authentication - Oauth, passport, okta , 
