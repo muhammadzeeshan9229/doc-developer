@@ -1,0 +1,77 @@
+Middlewares : 
+        1.jwt token
+        2.multer using node js
+        3.mkdirp for making folders
+        4.sharp for image sharping
+        5.catchasync + apiResponse from utils
+                                    authentication : auth-validation-jwt
+                                    Authorization : 
+                                    Validations : req-validation & other -using express-validator
+
+
+Utils :
+        apiFeatures
+        catchAsync - simple function
+        apiResponse
+        apiLimiter
+        Redis-Connections
+
+Common:
+
+Configs:
+        -configs for all 3 envs
+        -
+
+DataBase:
+
+
+
+
+
+
+- Following is a application structure for backend system of (Node + Express )
+
+    >src
+        >loaders
+        > routes
+        >Middlewares
+        >Validators
+        > controllers
+        > services
+        > orchestration
+        >migrations
+        >DataBase - Models
+        >configs
+        >Common
+        >Utils
+        > interfaces
+    > test
+    > app.ts/js
+    > package.json
+    > tsconfig.json
+    > .env
+    >docker-compose.yml
+
+
+
+
+
+
+
+                                /******************************/
+JWT-Token-steps for loggedin: used to check signed/loggedin resource
+        -User must be loggedin to have tocken
+        -get token from header-Authorization
+        -implement jwt-verify to get payload object
+        -use payload object to have properties 
+        -use these properties to use eg : to find data from DataBase using Model.find
+        -put that data in req
+        -next()
+
+
+Redis-Server-for-cache-data:
+        -redis.get/hget/hgetAll
+        -redis.set/hset
+        -redis-pipeline
+        -redis.keys
+Redis-standards : 
